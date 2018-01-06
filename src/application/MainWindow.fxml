@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="background" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <bottom>
+      <VBox prefHeight="111.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" />
+         </children>
+      </VBox>
+   </bottom>
+   <center>
+      <VBox alignment="CENTER">
+         <children>
+            <ImageView fx:id="imageView" fitHeight="263.0" fitWidth="421.0" pickOnBounds="true" preserveRatio="true">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </ImageView>
+            <Text fx:id="textbox" fill="WHITE" scaleX="1.5" scaleY="1.5" strokeType="OUTSIDE" strokeWidth="0.0" text="Please open a video" textAlignment="CENTER" translateY="-125.0" wrappingWidth="249.6708984375" />
+            <Slider fx:id="slider" styleClass="Slider" stylesheets="@application.css">
+               <VBox.margin>
+                  <Insets left="100.0" right="100.0" />
+               </VBox.margin>
+            </Slider>
+         </children>
+      </VBox>
+   </center>
+   <left>
+      <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="289.0" prefWidth="160.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#openVideo" prefHeight="40.0" prefWidth="100.0" stylesheets="@application.css" text="Open">
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="playbutton" disable="true" mnemonicParsing="false" onAction="#playVideo" prefHeight="40.0" prefWidth="100.0" text="Analyze">
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+            </Button>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Threshold:">
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+            </Text>
+            <TextField fx:id="thresholdValue" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#changeThreshold" prefHeight="30.0" prefWidth="50.0" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Transition Analyszer&#10;Nan Liu | Joshil Patel&#10;SFU | CMPT 365" textAlignment="CENTER" wrappingWidth="505.638671875">
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+            </Text>
+         </children>
+      </VBox>
+   </left>
+   <padding>
+      <Insets top="20.0" />
+   </padding>
+</BorderPane>
